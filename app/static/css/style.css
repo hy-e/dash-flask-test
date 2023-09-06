@@ -1,0 +1,17 @@
+body {
+    padding-top: 0px;
+  }
+  .starter-template {
+    padding: 100px 15px;
+    text-align: center;
+    color: beige;
+  }
+  .edit-template {
+    padding: 100px 15px;
+    text-align: center;
+    color: rgb(7, 7, 7);
+  }
+
+.background-img{
+    background-image: url('/static/img/form-image.jpg');
+}
