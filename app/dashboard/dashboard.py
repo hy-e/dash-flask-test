@@ -1,6 +1,7 @@
 from dash import Dash, html, dcc
 import dash_bootstrap_components as dbc
 from .callbacks import get_callbacks
+from .layout.details import build_details
 import os
 def create_dashboard(server):
     """Create a Plotly Dash dashboard."""
@@ -18,17 +19,7 @@ def create_dashboard(server):
         html_string = f.read()
 
     dash_app.index_string = html_string
-    dash_app.layout = html.Div([
-        dbc.Container([
-            html.H6("Change the value in the text box to see callbacks in action!"),
-            html.Div([
-                "Input: ",
-                dcc.Input(id='my-input', value='initial value', type='text')]),
-            html.Br(),
-            html.Div(id='my-output')
-        ], class_name="container-fluid container2")
-    
-    ])
+    dash_app.layout = html.Div(build_details())
 
     get_callbacks(dash_app)
 

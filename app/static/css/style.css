@@ -26,3 +26,52 @@ body {
     padding-top:100px;
     padding-bottom:100px
 }
+
+.chart-row, 
+.chart-col {
+  display: flex;
+  gap: 1em;
+}
+
+.chart-row {
+  flex-direction: row;
+}
+
+.chart-col {
+  flex-direction: column;
+}
+
+.chart-pill,
+.chart-done,
+.chart-rect{
+  padding: 1em;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid #999;
+}
+
+.chart-pill {
+  flex: 1;
+  border-radius: 1em;
+  border-style: dashed;
+}
+
+.chart-done {
+  flex: 1;
+  border-radius: 1em;
+  background-color: rgba(114, 113, 113, 0.597);
+  /* border-style: dashed; */
+}
+
+.chart-rect{
+  flex: 0;
+  margin: auto 0;
+  background: #eee;
+}
+
+.chart-line-h {
+  height: 2px;
+  min-width: 3em;
+  background: #999;
+  margin: auto -1em;
+}
