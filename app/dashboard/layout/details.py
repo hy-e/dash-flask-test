@@ -10,7 +10,7 @@ def build_details():
 
     # flow chart
     details += [html.Div([
-                    html.Div('PV', className='chart-done chart-col', id='pv-flow'),
+                    html.Div(className='chart-done chart-col', id='pv-flow', children=['PV',html.Div('PV')]),
                     html.Div(className='chart-line-h'),
                     html.Div('MV', className='chart-done chart-col', id='mv-flow'),
                     html.Div(className='chart-line-h'),
